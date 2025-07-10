@@ -1,0 +1,16 @@
+{
+  "name": "thestoicai",
+  "version": "1.0.0",
+  "description": "A Stoic AI Coach application",
+  "main": "server.js",
+  "scripts": {
+    "start": "node server.js",
+    "dev": "node server.js"
+  },
+  "dependencies": {
+    "dotenv": "^16.3.1"
+  },
+  "keywords": ["stoic", "ai", "philosophy", "coach"],
+  "author": "",
+  "license": "MIT"
+}
