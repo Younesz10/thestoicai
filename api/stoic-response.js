@@ -6,13 +6,10 @@ module.exports = async (req, res) => {
     return;
   }
 
-  let body = '';
-  req.on('data', chunk => { body += chunk; });
-  await new Promise(resolve => req.on('end', resolve));
-
+  // Use req.body directly (Vercel parses JSON automatically)
   let userPrompt, context;
   try {
-    ({ userPrompt, context } = JSON.parse(body));
+    ({ userPrompt, context } = req.body);
   } catch {
     res.status(400).json({ error: 'Invalid request' });
     return;
